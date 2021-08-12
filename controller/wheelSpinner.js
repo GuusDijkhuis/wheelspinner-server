@@ -3,6 +3,7 @@ import WheelSpinner from '../models/wheelSpinner.js';
 export const getAllWheelSpinners = async (req, res) => {
 	try {
 		const wheelSpinnerData = await WheelSpinner.find();
+		console.log(wheelSpinnerData)
 		res.status(200).json(wheelSpinnerData);
 	} catch(err) {
 		console.log(err)
