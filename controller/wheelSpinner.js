@@ -15,7 +15,6 @@ export const postWheelSpinner = async (req, res) => {
 		choices: req.body.choices
 	}
 	const newWheelSpinner = new WheelSpinner(wheelSpinnerData);
-	console.log(newWheelSpinner);
 	try {
 		await newWheelSpinner.save();
 	} catch(err) {
