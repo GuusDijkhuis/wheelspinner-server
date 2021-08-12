@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/spinner', wheelSpinnerRoutes);
+app.use('/spinners', wheelSpinnerRoutes);
 
 app.get('/', (req, res) => {
 	res.send('Database status: Online');
