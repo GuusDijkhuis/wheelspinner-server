@@ -16,9 +16,7 @@ app.use(express.json());
 
 app.use('/wheelspinner', wheelSpinnerRoutes);
 
-app.get('/', (req, res) => {
-	res.status(200).json(getAllWheelSpinners());
-})
+app.get('/', getAllWheelSpinners);
 
 const PORT = process.env.PORT || 5000;
 
