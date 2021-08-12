@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
+import { getAllWheelSpinners } from './controller/wheelSpinner';
 
 import wheelSpinnerRoutes from './routes/wheelSpinner.js';
 
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use('/wheelspinner', wheelSpinnerRoutes);
 
 app.get('/', (req, res) => {
-	res.send('Database status: Online');
+	res.status(200).json(getAllWheelSpinners());
 })
 
 const PORT = process.env.PORT || 5000;
