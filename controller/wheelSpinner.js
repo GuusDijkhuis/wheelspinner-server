@@ -12,7 +12,8 @@ export const getAllWheelSpinners = async (req, res) => {
 export const postWheelSpinner = async (req, res) => {
 	const wheelSpinnerData = {
 		title: req.body.title,
-		choices: req.body.choices
+		choices: req.body.choices,
+		color: req.body.color
 	}
 	const newWheelSpinner = new WheelSpinner(wheelSpinnerData);
 	try {
