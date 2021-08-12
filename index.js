@@ -15,6 +15,10 @@ app.use(express.json());
 
 app.use('/wheelspinner', wheelSpinnerRoutes);
 
+app.get('/', (req, res) => {
+	res.send('Database status: Online');
+})
+
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
